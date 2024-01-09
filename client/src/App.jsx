@@ -9,7 +9,7 @@ function App() {
       <header>
         <a href="" className="logo">
           <FaAirbnb />
-          <span>airbnb</span>
+          <span>airbn</span>
         </a>
       </header>
     </div>
