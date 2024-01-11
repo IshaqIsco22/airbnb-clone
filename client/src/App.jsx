@@ -1,18 +1,19 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/jsx-no-target-blank */
+import { Route, Routes } from "react-router";
 import "./App.css";
-import { FaAirbnb } from "react-icons/fa";
+import IndexPage from "./pages/IndexPage";
+import LoginPage from "./pages/LoginPage";
+import Layout from "./Layout";
 
 function App() {
   return (
-    <div>
-      <header>
-        <a href="" className="logo">
-          <FaAirbnb />
-          <span>airbn</span>
-        </a>
-      </header>
-    </div>
+    <Routes>
+      <Route path="" element={<Layout />}>
+        <Route index element={<IndexPage />} />
+        <Route path="/login" element={<LoginPage />} />
+      </Route>
+    </Routes>
   );
 }
 
